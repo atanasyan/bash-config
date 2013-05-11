@@ -5,8 +5,9 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# If we run not under tmux/screen try to attach to the session.
-if [[ $TERM != screen* ]]; then
+# If we run not under tmux/screen and not under
+# gnome terminal try to attach to the session.
+if [[ $TERM != screen* ]] && [[ "$COLORTERM" != gnome-* ]]; then
   # Get number of running tmux sessions
   tmux_sessions=`tmux ls 2> /dev/null | wc -l`
 
