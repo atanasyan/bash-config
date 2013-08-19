@@ -24,6 +24,7 @@ _clang_bld()
     opts=" \
     verbose \
     install \
+    clang \
     check"
 
     COMPREPLY=($(compgen -W "${opts}" -- ${cur}))  
