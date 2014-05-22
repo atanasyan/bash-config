@@ -8,6 +8,7 @@ _clang_cfg()
     opts=" \
     debug \
     release \
+    doc \
     wignore"
 
     COMPREPLY=($(compgen -W "${opts}" -- ${cur}))  
