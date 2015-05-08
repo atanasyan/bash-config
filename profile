@@ -20,3 +20,8 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+# set PATH to arcanist if it exists
+if [ -d "$HOME/Install/arcanist/arcanist/bin" ] ; then
+    PATH="$HOME/Install/arcanist/arcanist/bin:$PATH"
+fi
